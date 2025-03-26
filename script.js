@@ -14,15 +14,16 @@ const wordList = [
 // Setting Game Variables
 let selectedWord = "";
 let displayWord = "";
-let wrongGuess = 0;
+let wrongGuesses = 0;
 let guessedLetters = [];
 const maxMistakes = 6;
 
 function startGame(level) {
   selectedWord = getRandomWord(level);
 
-
   // Hide Difficulty Selection and Show Game Area & Difficulty Box
+displayedWord = '_'.repeat(selectedWord.length)
+document.getElementById('wordDisplay').textContent - displayedWord.split('').join('')
 
   // Add d-block to the difficultySlection list
   document.getElementById('difficultySelection').classList.add('d-none')
@@ -83,9 +84,58 @@ if(guessedLetters.includes(guessedLetter)){
 if(selectedWord.includes(guessedLetters)){
   correctGuess(guessedLetter)
 }else{
-  wrongGuesses(guessedLetter)
+  wrongGuesses(guessedLetter) 
 }
 
 inputField.value='' //Clear input field
 inputField.focus() //Refocus input field for the next guess
 }
+
+function wrongGuess(guessedLetter){
+  wrongGuesses++ // incrament the number of wrong guesses
+
+document.getElementById('wrongLetters').textContent += `${guessedLetter}` //  add the guessed letter to HTML div
+
+document.getElementById('shamrock').src = `imgs/shamrock${6-wrongGuess}`.jpg
+
+if (wrongGuesses === maxMistakes){ 
+  endgame=(false) // Check to see if the number of wrong guesses === the maxMistakes if it is , call endgame(false)
+}
+}
+
+function correctGuess(guessedLetter){
+  let newDisplayedWord = ''
+
+  for (let i = 0; i < selectedWord.length; i++){
+    if(selectedWord[i] === guessedLetter){
+      newDisplayedWord += guessedLetter
+    } else{
+      newDisplayedWord += displayedWord[i]
+    }
+  }
+
+displayedWord = newDisplayedWord
+document.getElementById('wordDisplay').textConent = displayedWord
+
+.split('')
+.join('')
+
+if(!displayedWord.includes ('_')){
+  endgame(true);
+}
+
+function correctGuess (guessedLetter){
+
+}
+
+function endgame(won){
+  if (won === true){
+    setTimeout(() => alert('yay you won'), 100)
+  }
+}
+}
+
+function restartGame(){
+  location.reload()
+}
+
