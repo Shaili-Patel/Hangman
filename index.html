@@ -56,16 +56,23 @@
             <h2 id="wordDisplay" class="mb-3">_ _ _ _ _ _</h2>
 
             <!--input for guessing-->
-            <div>
-                <input type="text" id="letterInput" maxlength="1"
-                    class="form-control d-inline-block w-auto text-center" />
-                <button id="guessBtn" class="button" onclick="guessLetter()">
-                    Guess
-                </button>
+            <div class="container1">
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <input type="text" id="letterInput" maxlength="1"
+                            class="form-control d-inline-block w-auto text-center" />
+                    </div>
+                    <div class="col-4">
+                        <button id="guessBtn" class="button" onclick="guessLetter()">
+                            Guess
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <p id="wrongLetters" class="fw-bold">Wrong Guesses:</p>
-            <img id="shamrock" src="img/shamrock6.png" alt="Shamrock Health" class="shamrock-img" />
+
+            <img id="shamrock" src="imgs/1wrong.png" alt="Shamrock Health" class="shamrock-img" />
 
             <div class="mt-4">
                 <button id="restartBtn" class="btn btn-danger" onclick="restartGame()">

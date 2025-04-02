@@ -4,6 +4,7 @@ const wordList = [
   "theone",
   "redpill",
   "bluepill",
+  "reality",
   "illusion",
   "simulation",
   "morpheus",
@@ -99,7 +100,8 @@ function wrongGuess(guessedLetter) {
 
   document.getElementById('wrongLetters').textContent += ` ${guessedLetter}` //  add the guessed letter to HTML div
 
-  document.getElementById('shamrock').src = `imgs/shamrock${6 - wrongGuess}`.jpg
+  document.getElementById('shamrock').src = `imgs/${wrongGuesses + 1}wrong.png`
+
 
   if (wrongGuesses === maxMistakes) {
     endGame(false); // Check to see if the number of wrong guesses === the maxMistakes if it is , call endgame(false)

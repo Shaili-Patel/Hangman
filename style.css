@@ -5,6 +5,10 @@ body {
     width: 100%;
     background-size: cover;
   }
+
+  .container1{
+  margin-left: 10%;
+  }
   
 h1{
   font-family: "sofachrome", sans-serif;
@@ -14,6 +18,11 @@ font-size: 70px;
 color: white;
 text-shadow: 6px 2px 5px rgb(0, 255, 64);
 padding-bottom: 90px;
+padding-top: 15px;
+}
+
+h2{
+  padding-bottom: 30px;
 }
 
 h3{
@@ -26,6 +35,9 @@ font-weight: 400;
 
 #difficultyBox, #wordDisplay{
   color: white;
+  font-family: "uniwars";
+font-weight: 400;
+font-size: 25px;
 }
 
 #wrongLetters{
@@ -34,10 +46,16 @@ font-weight: 400;
 font-weight: 400;
 }
 
+#shamrock{
+  height: 500px;
+  width: 600px;
+}
+
 p{
   color: white;
   font-family: "uniwars";
 font-weight: 400;
+padding-top: 90px;
 }
 
 .btn-success{
@@ -46,6 +64,7 @@ color: black;
 border: none;
 font-family: "uniwars";
 font-weight: 400;
+padding: 15px;
 }
 
 .btn-danger{
@@ -54,6 +73,7 @@ color: black;
 border: none;
 font-family: "uniwars";
 font-weight: 400;
+padding: 15px;
 }
   
 .btn-warning{
@@ -62,6 +82,7 @@ font-weight: 400;
   border: none;
   font-family: "uniwars";
 font-weight: 400;
+padding: 15px;
 }
 
 .btn-warning:hover, .btn-danger:hover, .btn-success:hover{
